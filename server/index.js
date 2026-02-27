@@ -20,7 +20,11 @@ const app = express();
 await connectCloudinary();
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: [
+    "http://localhost:5173",         // local dev
+    process.env.FRONTEND_URL         // production frontend
+  ],
+
   credentials: true
 }));
 
