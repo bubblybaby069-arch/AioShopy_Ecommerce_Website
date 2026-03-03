@@ -21,7 +21,7 @@ await connectCloudinary();
 
 app.use(cors({
   origin: [
-    "http://localhost:5173",         // local dev
+    "https://aio-shopy-ecommerce-website.vercel.app",         // local dev
     process.env.FRONTEND_URL         // production frontend
   ],
 
